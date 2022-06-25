@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { container } from "tsyringe";
-import { idText } from "typescript";
 import { UploadCarImageUseCase } from "./UploadCarImageUsecase";
 
 interface IFiles {
@@ -21,7 +20,7 @@ class UploadCarImageController {
             images_name,
         });
 
-        return response.status(201).send();
+        return response.status(201).send(images);
     }
 }
 
